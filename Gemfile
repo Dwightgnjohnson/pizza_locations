@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
 gem 'geocoder'
+gem 'active_model_serializers'

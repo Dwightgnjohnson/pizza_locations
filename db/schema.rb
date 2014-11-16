@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20141114214125) do
 
   create_table "points", force: true do |t|
     t.string   "name"
+    t.string   "city"
     t.string   "lat"
     t.string   "lng"
     t.datetime "created_at"

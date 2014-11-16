@@ -1,13 +1,15 @@
-<h1>Dwight's Favorite Ski Resorts</h1>
+<h1>Pizza Dude</h1>
 
 <div id="map"></div>
 
+
 <script>
-$(window).ready(function(){
-  <% @points.each do |point| %>
-    L.marker([<%= point.lat %>, <%= point.lng %>])
-      .addTo(window.map)
-      .bindPopup("<b><%= point.name %></b>");
-  <% end %>
+$.getJSON("http://localhost/api/pizza_joints")
+ .done(function(data){
+    data.points.forEach(function(point){
+        L.marker([point.lat, point.lng])
+        .addTo(window.map)
+        .bindPopup(point.name);
+    });
   });
 </script>

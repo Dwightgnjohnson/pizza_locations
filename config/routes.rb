@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
   root 'maps#show'
 
   namespace :api do
     post "/points" => "points#create"
+    get 'pizza_joints/create'
+    get 'pizza_joints/index'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -18,7 +18,7 @@
 $(window).ready(function(){
 
 
-  window.map = L.map('map').setView([39.0917, -120.0417], 9);
+  window.map = L.map('map').setView([ 29.7632800, -95.3632700], 9);
 
 
   L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
