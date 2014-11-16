@@ -4,7 +4,7 @@
 
 
 <script>
-$.getJSON("http://localhost/api/pizza_joints")
+$.getJSON("http://localhost:3000/api/pizza_joints")
  .done(function(data){
     data.points.forEach(function(point){
         L.marker([point.lat, point.lng])
