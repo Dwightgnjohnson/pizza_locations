@@ -4,6 +4,9 @@
 
 
 <script>
+
+
+
 $.getJSON("../api/pizza_joints")
  .done(function(data){
 
@@ -13,8 +16,6 @@ $.getJSON("../api/pizza_joints")
      iconSize:     [38, 35], // size of the icon
      popupAnchor:  [7, -16] // point from which the popup should open relative to the iconAnchor
   });
-
-
 
     data.points.forEach(function(point){
         L.marker([point.lat, point.lng], {icon: pizzaSteveIcon})
