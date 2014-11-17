@@ -6,8 +6,18 @@
 <script>
 $.getJSON("../api/pizza_joints")
  .done(function(data){
+
+     var pizzaSteveIcon = L.icon({
+     iconUrl: 'http://img2.wikia.nocookie.net/__cb20140303163911/uncle-grandpa/images/1/1b/Transparent_Pizza_Steve_Headband.png',
+
+     iconSize:     [38, 35], // size of the icon
+     popupAnchor:  [7, -16] // point from which the popup should open relative to the iconAnchor
+  });
+
+
+
     data.points.forEach(function(point){
-        L.marker([point.lat, point.lng])
+        L.marker([point.lat, point.lng], {icon: pizzaSteveIcon})
         .addTo(window.map)
         .bindPopup(point.name);
     });
